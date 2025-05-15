@@ -44,3 +44,7 @@ It is designed to streamline data ingestion for analysts, researchers, or commer
 2. Ensure you have the required dependencies:
    ```bash
    pip install pandas requests
+   ```
+
+Source URL
+[CVM Funds Extract (extrato_fi.csv)](https://dados.cvm.gov.br/dados/FI/DOC/EXTRATO/DADOS/extrato_fi.csv)
