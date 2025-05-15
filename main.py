@@ -1,4 +1,24 @@
 import pandas as pd
+"""
+This script downloads the daily extract of Brazilian investment funds ("Extrato diários") from the CVM website, saves it locally, and reads the CSV file while automatically detecting its separator and encoding. The script provides utility functions for:
+Functions:
+----------
+- read_csv_interpreter(file_path):
+    Determines the separator and encoding of a CSV file by attempting to read it with common Brazilian data formats. Returns the detected separator and encoding.
+- delete_old_files(file_path):
+    Deletes all CSV files in the specified directory to ensure only the latest data is present.
+- cvm_dwnld_and_save(file_path, url_list):
+    Downloads the CSV file from the provided CVM URL and saves it to the specified directory, removing any old CSV files beforehand.
+- main():
+    Orchestrates the download, file cleanup, separator/encoding detection, and initial data loading. Prints the first few rows of the loaded DataFrame for inspection.
+Usage:
+------
+Run the script to download the latest "extrato_fi.csv" from the CVM, clean up old files, and display the head of the DataFrame. The script is designed for general data analysis and commercial insights on Brazilian investment funds.
+Note:
+-----
+- The script is robust to unknown file formats by attempting multiple separator and encoding combinations.
+- It is safe to run multiple times; each run ensures only the latest data is present in the target directory.
+"""
 import requests
 import os
 
